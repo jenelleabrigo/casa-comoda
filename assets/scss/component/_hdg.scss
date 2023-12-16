@@ -1,0 +1,11 @@
+.c-hdg {
+  &01 {
+    font-size: 5.6rem;
+    font-weight: 500;
+
+    @include mq_sp {
+      font-size: 3.8rem;
+      text-align: center;
+    }
+  }
+}
