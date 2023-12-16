@@ -1,0 +1,14 @@
+.c-btn {
+  background: $primary;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.8rem 2.8rem;
+  text-decoration: none;
+  border: 1px solid $primary;
+  transition: 0.3s;
+
+  &:hover {
+    background: #fff;
+    color: $primary;
+  }
+}

@@ -1,0 +1,33 @@
+@use "sass:math";
+
+@function get_vw($size, $viewport: $sp-width) {
+  $rate: math.div(100, $viewport);
+
+  @return $rate * $size * 1vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font: 10px/1.7 $font-default;
+
+  @include mq_sp {
+    font-size: get_vw(10);
+  }
+}
+
+body {
+  color: $color-text;
+  font-size: 1.8rem;
+  -webkit-text-size-adjust: none;
+  min-width: $pc-min-width;
+  line-height: normal;
+
+  @include mq_sp {
+    min-width: 0;
+  }
+}
