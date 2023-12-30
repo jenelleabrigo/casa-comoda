@@ -34,6 +34,10 @@
       padding: 8rem 0;
     }
 
+    .c-hdg01 {
+      text-align: left;
+    }
+
     &__img-container {
       margin-left: -8rem;
       border-top-right-radius: 3rem;

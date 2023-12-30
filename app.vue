@@ -5,6 +5,7 @@
     <div class="l-content">
       <Hero />
       <AboutUs />
+      <Amenities />
     </div>
 
     <footer class="l-footer">©casacomoda2023</footer>
