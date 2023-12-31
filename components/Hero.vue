@@ -47,6 +47,7 @@
             /></swiper-slide>
           </swiper-container>
         </div>
+        <p class="c-caret">SCROLL</p>
       </div>
       <nuxt-link to="https://airbnb.com/h/casa-comoda-condo-unit-rental-at-azure" target="_blank" class="s-hero__inner__txt-container__btn c-btn u-sp-only">BOOK NOW!</nuxt-link>
     </div>
@@ -55,6 +56,7 @@
 <script setup></script>
 <style lang="scss" scoped>
 .s-hero {
+  position: relative;
   overflow: hidden;
   background: url("../assets/images/feature/img-bg.png") center center/cover;
   padding: 16rem 0;
