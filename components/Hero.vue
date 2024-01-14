@@ -10,7 +10,6 @@
 
         <div class="s-hero__inner__slider-container">
           <Swiper
-            :modules="modules"
             :slides-per-view="3"
             :loop="true"
             :spaceBetween="10"
@@ -122,10 +121,6 @@
       }
 
       &__slider {
-        overflow-x: hidden;
-        overflow-x: clip;
-        overflow-y: visible;
-
         &__item {
           &__img {
             height: 100%;
@@ -142,15 +137,8 @@
         }
 
         .swiper-pagination {
-          width: 71.3rem;
-          top: auto;
-          bottom: -6.5rem;
-          height: 0.2rem;
-          background: rgba(255, 255, 255, 0.3);
-
-          .swiper-pagination-progressbar-fill {
-            background: $primary;
-          }
+          width: 71.3rem !important;
+          left: 0 !important;
         }
       }
     }
