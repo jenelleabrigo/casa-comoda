@@ -17,6 +17,6 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "swiper": "^11.0.5"
+    "nuxt-swiper": "^1.2.2"
   }
 }

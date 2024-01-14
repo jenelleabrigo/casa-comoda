@@ -9,43 +9,44 @@
         </div>
 
         <div class="s-hero__inner__slider-container">
-          <swiper-container
-            :slidesPerView="3"
+          <Swiper
+            :modules="modules"
+            :slides-per-view="3"
             :loop="true"
             :spaceBetween="10"
-            :pagination="{
-              type: 'progressbar',
-            }"
             :autoplay="{
               delay: 2500,
+              disableOnInteraction: true,
             }"
-            :modules="modules"
             :breakpoints="{
               750: {
                 spaceBetween: 40,
               },
             }"
+            :pagination="{
+              type: 'progressbar',
+            }"
             class="s-hero__inner__slider-container__slider"
           >
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-1.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-2.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-3.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-4.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-5.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-            <swiper-slide class="s-hero__inner__slider-container__slider__item"
-              ><img src="~assets/images/feature/img-feature-6.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy"
-            /></swiper-slide>
-          </swiper-container>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-1.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-2.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-3.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-4.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-5.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+            <SwiperSlide class="s-hero__inner__slider-container__slider__item">
+              <img src="~assets/images/feature/img-feature-6.jpg" alt="feature" class="s-hero__inner__slider-container__slider__item__img" loading="lazy" />
+            </SwiperSlide>
+          </Swiper>
         </div>
         <p class="c-caret">SCROLL</p>
       </div>
@@ -54,7 +55,7 @@
   </div>
 </template>
 <script setup></script>
-<style lang="scss" scoped>
+<style lang="scss">
 .s-hero {
   position: relative;
   overflow: hidden;
@@ -121,6 +122,10 @@
       }
 
       &__slider {
+        overflow-x: hidden;
+        overflow-x: clip;
+        overflow-y: visible;
+
         &__item {
           &__img {
             height: 100%;
@@ -133,6 +138,18 @@
               border-radius: 1.5rem;
               box-shadow: 0.2rem 0.2rem 1rem rgba($color: #000000, $alpha: 0.5);
             }
+          }
+        }
+
+        .swiper-pagination {
+          width: 71.3rem;
+          top: auto;
+          bottom: -6.5rem;
+          height: 0.2rem;
+          background: rgba(255, 255, 255, 0.3);
+
+          .swiper-pagination-progressbar-fill {
+            background: $primary;
           }
         }
       }

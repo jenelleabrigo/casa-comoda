@@ -6,6 +6,7 @@
       <Hero />
       <AboutUs />
       <Amenities />
+      <AzureUrbanResort />
     </div>
 
     <footer class="l-footer">©casacomoda2023</footer>
